@@ -44,7 +44,6 @@ $pt = New-Object System.Drawing.Point
 if ([AutoClicker.Temp]::GetCursorPos([ref]$pt)) {
     Write-host "Нажимаем ПКМ в точке $($pt.X), $($pt.Y) каждые ${Interval}мс, пока не нажмут Ctrl^C или не нажмут кнопку " -NoNewline
     Write-Host -ForegroundColor Cyan "Пуск " -NoNewline
-    Write-Host "(не работает в Windows 7)."
     while($true) {
         $start = [AutoClicker.Temp]::FindWindow("ImmersiveLauncher", "Start menu")
         $fg = [AutoClicker.Temp]::GetForegroundWindow()
